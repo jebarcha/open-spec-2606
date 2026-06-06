@@ -141,6 +141,29 @@ context: |
 
 > **Why this matters:** OpenSpec uses this context when generating `proposal.md`, `design.md`, `specs/`, and `tasks.md`. Without it, the AI has to infer your stack and conventions from scratch on every command.
 
+### Step 4 — Enable the Expanded Mode of OpenSpec
+
+By default, OpenSpec installs with the `core` profile, which provides a minimal command set. This workshop uses the **expanded mode**, which unlocks step-by-step artifact control (`/opsx:new`, `/opsx:continue`), implementation verification (`/opsx:verify`), and more.
+
+Run the following to switch to the expanded profile and pull the updated workflow files:
+
+```bash
+openspec config profile
+openspec update
+```
+
+When prompted by `openspec config profile`, select the **expanded** (or **full**) option.
+
+Verify the new commands are available by checking the workflow files:
+
+```bash
+ls .windsurf/workflows/
+```
+
+You should now see entries for `opsx-new.md`, `opsx-continue.md`, `opsx-verify.md`, and others.
+
+> 📖 Reference: [Expanded/Full Workflow](https://github.com/Fission-AI/OpenSpec/blob/main/docs/workflows.md#expandedfull-workflow-custom-selection)
+
 ---
 
 ## Workshop
